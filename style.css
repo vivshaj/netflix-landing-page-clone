@@ -1,0 +1,571 @@
+*  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+/*
+
+The default value for box-sizing is content-box, which means that the width 
+and height properties only apply to the content of the element, excluding 
+padding and border.When you set box-sizing: border-box;,it changes the box
+ model so that the specified width and height include both the content, 
+ padding,and border of the element. In other words, the total width and height
+  of the element are calculated as:
+
+Total Width  = Width + Padding + Border
+Total Height = Height + Padding + Border
+
+*/
+
+}
+
+body  {
+    background-color: black;
+    color: white;
+    font-family:'Poppins',sans-serif;
+    
+}
+
+.navbar  {
+    position:absolute;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    padding:2% 12%;
+    z-index: 1;
+}
+
+.nav_netflix  {
+    width:7.5rem;
+    height:100%;
+}
+
+.nav_other_items  {
+    display:flex;
+    /*gap: 0.63rem;*/
+    gap:1.5rem;
+}
+
+.netflix-logo  {
+    /*width:100%;
+    height:100%;*/
+    height:2.6rem;
+    width:9.25rem;
+    
+}
+
+.nav_lang  {
+    display:flex;
+    height:36.58px;
+}
+
+.lang_dropdown  {
+    background: transparent;
+    border: none;
+    color:white;
+    
+}
+
+.lang_dropdown  option  {
+    color:black;
+}
+
+
+.dropdown_container {
+    display:flex;
+    border: 1px solid rgb(116, 115, 115);
+    padding:0.5rem 0.6rem 0.5rem 0.6rem;
+    border-radius:4px;
+    background: rgba(0, 0, 0, 0.4) ;  
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.sign-in  {
+    border: #dc030f;
+    background-color:  #dc030f;
+    color: white;
+    padding:0.35rem 0.5rem; 
+    width:4.35rem;
+    height:2.286875rem; 
+    font-weight: bolder; 
+    border-radius: 4px;
+}
+
+.hero_bgrnd-img-container  {
+    position: relative;
+    width:100%;
+    height:100%;
+    height:62.465rem;
+    /*margin-bottom:0;
+    padding-bottom:0;*/
+}
+
+.hero_bg_image  {
+    width:100%;
+    height:100%;   
+    object-fit:cover ; 
+}
+
+.bg_overlay  {
+    position: absolute;
+    top:0;
+    inset:0;  /* short hand for margin */
+    
+    width:100%;
+    height:100%; 
+    /*height: 76.36rem;*/
+    height:62.46rem;
+    
+    /*background: rgba(0, 0, 0, 0.4);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.9));
+    pointer-events: none; /* Allows clicks to go through the overlay to the image */
+}
+
+.hero_card  {
+    position: absolute;
+    top:40%;
+    left:17%;
+    display:flex;
+    flex-direction:column;
+    gap:1.2rem;
+    text-align: center;
+    align-items: center;
+}
+
+.hero_title  {
+    font-weight:900;
+    font-size:2.7rem;
+    letter-spacing: 0.3px;
+}
+
+.hero_sub_title  {
+    font-weight:500;
+    font-size:1.3rem;
+    letter-spacing: 0px;
+}
+
+.hero_descript  {
+    font-weight:500;
+    font-size:1.2rem;
+    letter-spacing: 0px;
+}
+
+.mail  {
+    display:flex;
+    gap:10px;
+    height: 3.5rem;
+}
+
+.email  {
+    width: 22rem;
+    background-color:rgba(29, 27, 27, 0.856);
+    border: 1px solid rgb(116, 115, 115);
+    border-radius: 4px;
+    z-index:2;
+}
+
+.email::placeholder  {
+    font-size: 17px;
+    color: rgb(173, 172, 172);
+    font-weight: 600;
+    padding-left:1rem;
+}
+
+.started  {
+    width:12rem;
+    padding:0.7rem 0.6rem;
+    background-color:  #dc030f;
+    border: #dc030f;
+    border-radius: 4px;
+    font-weight:600;
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+.card1,.card2,.card3,.card4 {
+    border-top:8px solid rgb(36, 35, 36);
+    padding:50px;
+
+}
+
+.card1  {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    display:inline-grid;
+    grid-template-columns: 50% 40% ;
+    text-align:left;
+    align-items:center;
+    /*padding:25px 45px 50px;*/
+    padding:2rem 3rem 4rem 5rem;
+    gap:2rem;
+    width:100%;
+    padding-right:9rem;   
+}
+
+
+.descrypt  {
+   padding-left:3rem;
+    /*padding-bottom:4.5rem;*/
+}
+
+.card1 img  {
+    width: 110%;
+    grid-column: 2/2;
+    grid-row:1/2;
+    padding-top:1.5rem;
+    padding-bottom: 1.5rem;
+    z-index:-2;
+
+}
+
+.card1 video {
+    position:relative;
+    top: -0.45rem;
+    left: 2.65rem;
+    width:90%;
+    height:48%;
+    grid-column:2/2;
+    grid-row: 1/2;
+    z-index:-1;
+    
+}
+
+
+.style_cards h1  {
+    font-size:3rem;
+    padding:1rem;
+    padding-left:0;
+    line-height: 3.5rem;
+}
+
+.style_cards h3 {
+    font-weight:400;
+    font-size:1.4rem;
+}
+
+.card2  {
+    position:relative;
+    display:inline-grid;
+    grid-template-columns: 40% 50% ;
+    text-align:left;
+    align-items:center;
+    padding:60px 45px 90px 8rem;
+    gap:2rem;
+    width:100%;
+    
+}
+/*
+.descrypt2  {
+    /*padding-left:4.15rem;
+}*/
+
+.card2 .netflix_mobile_img  {
+    position: relative;
+    width:30.5rem;
+    height:22.5rem;
+    z-index:-1;
+    
+}
+
+/* download part */
+
+.stranger  {
+    position:absolute;
+    width:17rem;
+    height:6.1rem;
+    border-radius:10px;
+    display:flex;
+    gap:1rem;
+    border:2px solid rgb(116, 115, 115);
+    top:58%;
+    left:17.5%;
+    padding:0.4rem 0.7rem;
+    padding-right:0;
+    background-color:black;
+    z-index:1;
+}
+
+.stranger .contents  {
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    padding-right:0.3rem;
+    width:100%;
+}
+.stranger .stranger_image  {
+    width:3.5rem;
+    height:100%;
+}
+
+.content-item  {
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.stranger .contents p  {
+    font-size:15px;
+    line-height: 1.2rem;
+
+}
+.stranger .contents span  {
+    color:rgb(10, 111, 194);
+    font-size: 13px;
+    font-weight:normal;
+    line-height: 0.8rem;
+
+}
+
+.download_gif  {
+    width: 3rem;
+    height:3rem;
+}
+
+
+
+
+.card3  {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    display:inline-grid;
+    grid-template-columns: 50% 40% ;
+    text-align:left;
+    align-items:center;
+    /*padding:25px 45px 50px;*/
+    padding:3rem 3rem 0px 5rem;
+    gap:2rem;
+    width:100%;
+    padding-right:9rem;   
+}
+
+.descrypt3  {
+    padding-left:3rem;
+    padding-bottom:4.5rem;
+}
+
+.card3 img  {
+    width: 110%;
+    grid-column: 2/2;
+    grid-row:1/2;
+    padding-top:1.5rem;
+    padding-bottom: 3rem;
+
+}
+
+.card3 video {
+    position:relative;
+    width:100%;
+    top: -3.7rem;
+    left: 5rem;
+    width:70%;
+    height:50%;
+    grid-column:2/2;
+    grid-row: 1/2;
+    z-index:-1;
+    
+}
+
+
+.card4  {
+    position:relative;
+    display:inline-grid;
+    grid-template-columns: 40% 50% ;
+    text-align:left;
+    align-items:center;
+    /*padding:5rem 4rem 5rem 10rem;*/
+    
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1.4rem;
+    padding-left:2.2rem;
+    
+}
+/*
+.descrypt2  {
+    /*padding-left:4.15rem;
+}*/
+
+.card4 img  {
+    width:30.5rem;
+    height:22.5rem;    
+}
+
+
+/* ---------------  FAQ   -----------------  */
+
+
+.faq  {
+    border-top: 8px solid  rgb(36, 35, 36);
+    background-color: black;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 900;
+    padding-top:4rem;
+    padding-bottom: 5rem;
+    /*padding-bottom:4rem;*/
+
+}
+.faq h1  {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.faq_container  {   
+    width:100%;   
+    display: flex;
+    justify-content: center;
+    
+}
+
+.faq_container ul  {
+    list-style: none;
+    width: 76%;
+    display:flex;
+    flex-direction: column;
+    gap:0.6rem;
+}
+
+.faq_container ul li button {
+    background-color: #303030;
+    width:100%;
+    text-align:start;
+    padding:1.5rem 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    color: white;
+    font-weight: 300;
+    vertical-align: middle;
+    border:none;
+}
+
+.faq_container ul li button img  {
+    float:right;
+    width:2.1rem;
+    height:2.1rem;
+    color: white;
+}
+
+.faq_container ul li .desc  {
+    padding:1.5rem;
+    border-top: 1px solid black;
+    background-color:#303030;
+    /*display: flex;
+    flex-direction: column;   */
+}
+
+.faq_container ul li .desc p  {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: justify;
+    
+}
+
+.faq_container ul li .desc p:first-child {
+    margin-bottom: 30px;
+}
+
+
+.mail_session  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:3.2rem;
+    justify-content: center;
+    gap:1rem;
+
+}
+
+
+
+
+/* -----------------  footer -------------------- */
+
+.footer {
+    border-top:8px solid rgb(36, 35, 36);
+}
+
+.footer,.footer a  {
+    color:  rgb(163, 163, 163);
+    font-size: 0.9rem;
+    font-weight:large;
+}
+
+/*
+.footer p {
+    margin-bottom:1.4rem;
+    margin-left:10rem;
+}*/
+.footer p  {
+    font-size: 1rem;
+}
+
+.footer .footer_items_list  {
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap: 2.5rem;
+    /*margin-left:10rem;
+    margin-bottom: 1.4rem;
+    margin-right:15rem;*/
+}
+
+/*
+.footer li  {
+    line-height:1.9rem;
+
+}*/
+
+.footer ul  {
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    gap:0.9rem;
+
+}
+
+.footer-container {
+    display:flex;
+    flex-direction: column;
+    /*margin-left:10rem;*/
+    justify-content:center;
+    /*margin-right:15rem;*/
+    margin:4rem 10rem;
+    gap:1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
